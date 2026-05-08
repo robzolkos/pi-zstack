@@ -9,13 +9,13 @@ The preferred install method is the bash installer below. It installs each packa
 ## Preferred: install from GitHub
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/robzolkos/pi-zstack/main/install.sh | bash
+curl -fsSL -H "Accept: application/vnd.github.raw" https://api.github.com/repos/robzolkos/pi-zstack/contents/install.sh?ref=main | bash
 ```
 
 Safer inspect-first version:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/robzolkos/pi-zstack/main/install.sh -o /tmp/pi-zstack-install.sh
+curl -fsSL -H "Accept: application/vnd.github.raw" https://api.github.com/repos/robzolkos/pi-zstack/contents/install.sh?ref=main -o /tmp/pi-zstack-install.sh
 less /tmp/pi-zstack-install.sh
 bash /tmp/pi-zstack-install.sh
 ```

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_RAW_URL="${PI_ZSTACK_RAW_URL:-https://raw.githubusercontent.com/robzolkos/pi-zstack/main}"
-PACKAGES_URL="${PI_ZSTACK_PACKAGES_URL:-$REPO_RAW_URL/packages.txt}"
+REPO_REF="${PI_ZSTACK_REF:-main}"
+PACKAGES_URL="${PI_ZSTACK_PACKAGES_URL:-https://api.github.com/repos/robzolkos/pi-zstack/contents/packages.txt?ref=$REPO_REF}"
 
 if ! command -v pi >/dev/null 2>&1; then
   echo "Error: pi is not installed or not on PATH" >&2
@@ -10,7 +10,7 @@ if ! command -v pi >/dev/null 2>&1; then
 fi
 
 if command -v curl >/dev/null 2>&1; then
-  fetch() { curl -fsSL "$1"; }
+  fetch() { curl -fsSL -H "Accept: application/vnd.github.raw" "$1"; }
 elif command -v wget >/dev/null 2>&1; then
   fetch() { wget -qO- "$1"; }
 else
