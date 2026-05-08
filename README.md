@@ -10,11 +10,6 @@ My personal [Pi](https://pi.dev) stack as an installable Pi package.
 pi install npm:pi-zstack
 ```
 
-To try it for a single Pi run without adding it to your settings:
-
-```bash
-pi -e npm:pi-zstack
-```
 
 ## Included Pi packages
 
@@ -22,6 +17,3 @@ pi -e npm:pi-zstack
 - [`pi-slopchop`](https://www.npmjs.com/package/pi-slopchop)
 - [`pi-disable-model-skill-invocation`](https://www.npmjs.com/package/pi-disable-model-skill-invocation)
 
-## Gallery
-
-This package is tagged with `pi-package` and includes a Pi manifest in `package.json`, so it can be discovered by the Pi package gallery.
