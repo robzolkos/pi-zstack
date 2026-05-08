@@ -1,0 +1,20 @@
+{
+  "name": "pi-zstack",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Meta package for a curated Pi setup (extensions, skills, and defaults).",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "meta-package",
+    "skills",
+    "extensions"
+  ],
+  "dependencies": {
+    "pi-disable-model-skill-invocation": "latest",
+    "pi-skill-model-effort": "latest",
+    "pi-slopchop": "latest"
+  }
+}
