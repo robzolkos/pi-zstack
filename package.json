@@ -1,6 +1,6 @@
 {
   "name": "pi-zstack",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "Rob Zolkos' personal Pi stack as an installable meta package.",
   "license": "MIT",
@@ -26,18 +26,24 @@
   "dependencies": {
     "pi-disable-model-skill-invocation": "^0.1.1",
     "pi-skill-model-effort": "^0.1.2",
-    "pi-slopchop": "^0.0.4"
+    "pi-slopchop": "^0.0.4",
+    "pi-autoresearch": "^1.4.0"
   },
   "bundledDependencies": [
+    "pi-autoresearch",
     "pi-disable-model-skill-invocation",
     "pi-skill-model-effort",
     "pi-slopchop"
   ],
   "pi": {
     "extensions": [
+      "node_modules/pi-autoresearch/extensions",
       "node_modules/pi-disable-model-skill-invocation/extensions",
       "node_modules/pi-skill-model-effort/extensions/skill-model-effort.ts",
       "node_modules/pi-slopchop/src/index.ts"
+    ],
+    "skills": [
+      "node_modules/pi-autoresearch/skills"
     ]
   },
   "publishConfig": {

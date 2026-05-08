@@ -36,6 +36,7 @@ See [`packages.txt`](./packages.txt).
 
 Current packages:
 
+- [`pi-autoresearch`](https://www.npmjs.com/package/pi-autoresearch)
 - [`pi-disable-model-skill-invocation`](https://www.npmjs.com/package/pi-disable-model-skill-invocation)
 - [`pi-skill-model-effort`](https://www.npmjs.com/package/pi-skill-model-effort)
 - [`pi-slopchop`](https://www.npmjs.com/package/pi-slopchop)
