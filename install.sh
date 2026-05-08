@@ -18,7 +18,7 @@ else
   exit 1
 fi
 
-echo "Fetching package list from $PACKAGES_URL"
+echo "Installing pi-zstack packages..."
 
 fetch "$PACKAGES_URL" | while IFS= read -r line || [[ -n "$line" ]]; do
   # Trim leading/trailing whitespace.
@@ -28,8 +28,16 @@ fetch "$PACKAGES_URL" | while IFS= read -r line || [[ -n "$line" ]]; do
   # Skip blanks and comments.
   [[ -z "$pkg" || "${pkg:0:1}" == "#" ]] && continue
 
-  echo "Installing $pkg"
-  pi install "$pkg"
+  printf "  • %s... " "$pkg"
+
+  if output="$(NPM_CONFIG_FUND=false NPM_CONFIG_AUDIT=false pi install "$pkg" 2>&1)"; then
+    echo "done"
+  else
+    echo "failed"
+    echo
+    echo "$output"
+    exit 1
+  fi
 done
 
-echo "pi-zstack install complete."
+echo "Done."
