@@ -1,20 +1,46 @@
 {
   "name": "pi-zstack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
-  "description": "Meta package for a curated Pi setup (extensions, skills, and defaults).",
+  "description": "Rob Zolkos' personal Pi stack as an installable meta package.",
   "license": "MIT",
   "type": "module",
+  "author": "Rob Zolkos <rob@zolkos.com>",
+  "homepage": "https://github.com/robzolkos/pi-zstack#readme",
+  "bugs": {
+    "url": "https://github.com/robzolkos/pi-zstack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robzolkos/pi-zstack.git"
+  },
   "keywords": [
-    "pi",
     "pi-package",
+    "pi",
+    "pi-extension",
     "meta-package",
+    "personal-stack",
     "skills",
     "extensions"
   ],
   "dependencies": {
-    "pi-disable-model-skill-invocation": "latest",
-    "pi-skill-model-effort": "latest",
-    "pi-slopchop": "latest"
+    "pi-disable-model-skill-invocation": "^0.1.1",
+    "pi-skill-model-effort": "^0.1.2",
+    "pi-slopchop": "^0.0.4"
+  },
+  "bundledDependencies": [
+    "pi-disable-model-skill-invocation",
+    "pi-skill-model-effort",
+    "pi-slopchop"
+  ],
+  "pi": {
+    "extensions": [
+      "node_modules/pi-disable-model-skill-invocation/extensions",
+      "node_modules/pi-skill-model-effort/extensions/skill-model-effort.ts",
+      "node_modules/pi-slopchop/src/index.ts"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
