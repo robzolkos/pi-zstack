@@ -1,6 +1,6 @@
 {
   "name": "pi-zstack",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "description": "Rob Zolkos' personal Pi stack as an installable meta package.",
   "license": "MIT",

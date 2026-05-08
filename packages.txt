@@ -1,0 +1,6 @@
+# Pi packages to install, one per line.
+# Blank lines and lines starting with # are ignored.
+# Supported by pi install: npm:<package> or git:<repo-url>
+npm:pi-disable-model-skill-invocation
+npm:pi-skill-model-effort
+npm:pi-slopchop
